@@ -29,3 +29,8 @@ async function fetchGifs(query) {
     console.error("Error fetching GIFs:", error)
   }
 }
+// Event listener
+fetchBtn.addEventListener("click", () => {
+  const query = searchInput.value || "cats" // default if empty
+  fetchGifs(query)
+})
